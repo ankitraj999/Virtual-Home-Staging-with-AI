@@ -2,10 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
 
-export async function generateStagedImage(inputImagePath, roomStyle) {
+export async function generateStagedImage(inputImage, roomStyle) {
   // Read and encode the image
-  const imageBuffer = fs.readFileSync(inputImagePath);
-  const base64Image = imageBuffer.toString('base64');
+  // const imageBuffer = fs.readFileSync(inputImagePath);
+  const base64Image = inputImage.toString('base64');
   
   const promptMap = {
     modern: "Modify the given room image into a professional photo of a modern furnished living room with clean lines, neutral colors, and minimal decor",
