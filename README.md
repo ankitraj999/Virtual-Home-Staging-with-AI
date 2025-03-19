@@ -1,6 +1,10 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Application picture
+## Virtual Home Staging with AI
+
+<img width="1366" alt="Screenshot 2025-03-18 at 6 25 59 PM" src="https://github.com/user-attachments/assets/099a29c8-6c49-402c-994c-3230cf67865c" />
+<img width="1397" alt="Screenshot 2025-03-18 at 6 25 41 PM" src="https://github.com/user-attachments/assets/5a2a2c34-334c-4013-be70-5df528ae6071" />
+<img width="1406" alt="Screenshot 2025-03-18 at 6 08 57 PM" src="https://github.com/user-attachments/assets/aa3a1ca6-0a7d-4335-af7f-4fb8bab25b79" />
 
 <img width="1366" alt="Screenshot 2025-03-18 at 6 25 59 PM" src="https://github.com/user-attachments/assets/4c358a4b-12fc-4d4a-966d-0baa1ecc691f" />
 
