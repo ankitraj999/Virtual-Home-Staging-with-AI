@@ -79,16 +79,16 @@ export async function generateStagedImage(inputImage, roomStyle) {
     const imageResponse = await axios.get(imageUrl, { responseType: 'arraybuffer' });
     
     // Save the image
-    const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
-    if (!fs.existsSync(uploadsDir)) {
-      fs.mkdirSync(uploadsDir, { recursive: true });
-    }
+    // const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
+    // if (!fs.existsSync(uploadsDir)) {
+    //   fs.mkdirSync(uploadsDir, { recursive: true });
+    // }
     
     const timestamp = Date.now();
-    const outputPath = path.join(uploadsDir, `staged-${timestamp}.jpg`);
-    fs.writeFileSync(outputPath, Buffer.from(imageResponse.data));
+    // const outputPath = path.join(uploadsDir, `staged-${timestamp}.jpg`);
+    // fs.writeFileSync(outputPath, Buffer.from(imageResponse.data));
     
-    console.log(`Image saved to ${outputPath}`);
+    // console.log(`Image saved to ${outputPath}`);
     return `/uploads/staged-${timestamp}.jpg`;
     
   } catch (error) {
