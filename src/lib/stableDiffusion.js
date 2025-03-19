@@ -78,15 +78,15 @@ export async function generateStagedImage(inputImage, roomStyle) {
     const imageUrl = result[0]; // Assuming the output is an array with the image URL as first element
     const imageResponse = await axios.get(imageUrl, { responseType: 'arraybuffer' });
     
-    // Save the image
-    const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
-    if (!fs.existsSync(uploadsDir)) {
-      fs.mkdirSync(uploadsDir, { recursive: true });
-    }
+    // // Save the image
+    // const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
+    // if (!fs.existsSync(uploadsDir)) {
+    //   fs.mkdirSync(uploadsDir, { recursive: true });
+    // }
     
-    const timestamp = Date.now();
-    const outputPath = path.join(uploadsDir, `staged-${timestamp}.jpg`);
-    fs.writeFileSync(outputPath, Buffer.from(imageResponse.data));
+    // const timestamp = Date.now();
+    // const outputPath = path.join(uploadsDir, `staged-${timestamp}.jpg`);
+    // fs.writeFileSync(outputPath, Buffer.from(imageResponse.data));
     
     // Convert the binary data to a Base64 string and prepend the data URI prefix
     const base64ImageData = Buffer.from(imageResponse.data).toString('base64');

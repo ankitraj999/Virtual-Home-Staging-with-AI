@@ -15,17 +15,17 @@ export async function POST(request) {
       return new Response(JSON.stringify({ error: 'No image provided' }), { status: 400 })
     }
 
-    // Convert the File (a Blob) to a Buffer
-    const buffer = Buffer.from(await image.arrayBuffer())
-    // Create a unique filename using timestamp and uuid
-    const uniqueSuffix = Date.now() + '-' + uuidv4()
-    const ext = path.extname(image.name)
-    const filename = uniqueSuffix + ext
-    // Construct the file path (adjust the directory as needed)
-    const filePath = path.join(process.cwd(), 'public', 'uploads', filename)
+    // // Convert the File (a Blob) to a Buffer
+    // const buffer = Buffer.from(await image.arrayBuffer())
+    // // Create a unique filename using timestamp and uuid
+    // const uniqueSuffix = Date.now() + '-' + uuidv4()
+    // const ext = path.extname(image.name)
+    // const filename = uniqueSuffix + ext
+    // // Construct the file path (adjust the directory as needed)
+    // const filePath = path.join(process.cwd(), 'public', 'uploads', filename)
 
-    // Save the uploaded file to disk
-    await fs.writeFile(filePath, buffer)
+    // // Save the uploaded file to disk
+    // await fs.writeFile(filePath, buffer)
 
     // Generate the staged image using your custom function
     const stagedImageDataUri = await generateStagedImage(image, roomStyle)
